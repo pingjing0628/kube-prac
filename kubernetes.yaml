@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubernetes-prac-pod
+  labels:
+    app: demoApp
+spec:
+  containers:
+  - name: kubernetes-prac-pod
+    image: pingjing0628/kube-prac-app
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 3000
