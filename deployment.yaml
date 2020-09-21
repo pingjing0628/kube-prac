@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: demoApp
@@ -15,9 +15,5 @@ spec:
       containers:
       - name: kubernetes-prac-container
         image: pingjing0628/kube-prac-app
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 3000
